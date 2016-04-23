@@ -45,7 +45,7 @@ something like `/dev/cu.usbmodem1421` on Macs.
 Replace `atreus.hex` here with the filename of whatever you downloaded
 above. Reset the board and quickly run this command:
 
-    $ avrdude -p atmega32u4 -c avr109 -U flash:w:atreus.hex -P /path/to/usb
+    $ make upload KEYMAP=qwerty_dejanr USB=/dev/cu.usbmodem14D21
 
 It should emit a bunch of output followed by "avrdude done.  Thank you."
 
@@ -108,7 +108,7 @@ full AVR compiler suite.
 ### Mac OS X
 
     $ brew install avr-libc
-    
+
 If you already installed Crosspack above you should be fine.
 
 ### Windows
